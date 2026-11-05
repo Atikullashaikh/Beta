@@ -1,3 +1,67 @@
+@font-face {
+  font-family: "LTMuseum";
+  src: url("../assets/LTMuseum-1011/LTMuseum-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LTMuseum";
+  src: url("../assets/LTMuseum-1011/LTMuseum-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LTMuseum";
+  src: url("../assets/LTMuseum-1011/LTMuseum-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LTMuseum";
+  src: url("../assets/LTMuseum-1011/LTMuseum-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LTMuseum";
+  src: url("../assets/LTMuseum-1011/LTMuseum-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LTMuseum";
+  src: url("../assets/LTMuseum-1011/LTMuseum-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LTMuseum";
+  src: url("../assets/LTMuseum-1011/LTMuseum-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LTMuseum";
+  src: url("../assets/LTMuseum-1011/LTMuseum-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 $sidebar-width: 260px;
 $sidebar-bg: #fafaf9;
 $sidebar-surface: #ffffff;
@@ -9,7 +73,7 @@ $sidebar-active-bg: #eff6ff;
 $sidebar-active-text: #2563eb;
 $sidebar-radius: 10px;
 $sidebar-transition: 0.15s ease;
-$sidebar-font: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+$sidebar-font: "LTMuseum", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
   sans-serif;
 
 .notes-sidebar {
@@ -62,7 +126,7 @@ $sidebar-font: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
 
     .sidebar-brand-text {
       font-weight: 600;
-      font-size: 16px;
+      font-size: 20px;
       white-space: nowrap;
     }
   }
@@ -92,7 +156,7 @@ $sidebar-font: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
     background: transparent;
     color: $sidebar-muted;
     font: inherit;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -158,6 +222,94 @@ $sidebar-font: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
       overflow: hidden;
       text-overflow: ellipsis;
       min-width: 0;
+    }
+
+    /* Section-specific styling for Mathematics chapter items */
+    [data-section="mathematics"] & {
+      .sidebar-item-icon {
+        color: #6366f1;
+      }
+
+      &:hover {
+        background: #eef2ff;
+      }
+
+      &--active {
+        background: #eef2ff;
+        border-color: #6366f1;
+        color: #4f46e5;
+        font-weight: 600;
+
+        .sidebar-item-icon {
+          color: #4f46e5;
+        }
+      }
+    }
+
+    /* Section-specific styling for Calculus & Probability chapter items */
+    [data-section="calculus-probability"] & {
+      .sidebar-item-icon {
+        color: #7c3aed;
+      }
+
+      &:hover {
+        background: #f5f3ff;
+      }
+
+      &--active {
+        background: #f5f3ff;
+        border-color: #7c3aed;
+        color: #6b21a8;
+        font-weight: 600;
+
+        .sidebar-item-icon {
+          color: #6b21a8;
+        }
+      }
+    }
+
+    /* Section-specific styling for Class 11 Maths Part 1 chapter items */
+    [data-section="class-11-maths-1"] & {
+      .sidebar-item-icon {
+        color: #059669;
+      }
+
+      &:hover {
+        background: #f0fdf4;
+      }
+
+      &--active {
+        background: #f0fdf4;
+        border-color: #059669;
+        color: #065f46;
+        font-weight: 600;
+
+        .sidebar-item-icon {
+          color: #065f46;
+        }
+      }
+    }
+
+    /* Section-specific styling for Class 11 Maths 2 chapter items */
+    [data-section="class-11-maths-2"] & {
+      .sidebar-item-icon {
+        color: #d97706;
+      }
+
+      &:hover {
+        background: #fffbeb;
+      }
+
+      &--active {
+        background: #fffbeb;
+        border-color: #d97706;
+        color: #92400e;
+        font-weight: 600;
+
+        .sidebar-item-icon {
+          color: #92400e;
+        }
+      }
     }
   }
 
